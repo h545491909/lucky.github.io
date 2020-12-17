@@ -12,13 +12,18 @@
         }
         /*框架设置*/
         
+        body {
+            overflow: hidden;
+        }
+        
         #container {
-            width: 100.1vw;
+            width: 98.9vw;
             height: 100vh;
             background-image: url(img/main2.jpg);
             display: flex;
             justify-content: center;
             align-items: center;
+            overflow: hidden;
         }
         /*标题*/
         
@@ -91,7 +96,7 @@
         
         #next {
             position: absolute;
-            padding-right: 5%;
+            padding-right: 5vw;
             top: 85vh;
             transition: 1s;
             display: block;
@@ -109,16 +114,16 @@
             display: none;
             position: absolute;
             bottom: 0vh;
-            width: 100.1vw;
+            width: 98.9vw;
             height: 30vh;
             background-color: rgba(255, 255, 255, 0.1);
-            animation: hideIndex 1.5s;
+            animation: hideIndex 1s;
         }
         
         #pre {
             position: absolute;
             top: 2vh;
-            left: 49vw;
+            left: 48.5vw;
             margin: 0 auto;
             transition: 1s;
             display: block;
@@ -136,24 +141,27 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            overflow: hidden;
         }
         /*每个广告位*/
         
         .bottom_box {
             position: relative;
             height: 18vh;
-            width: 14vw;
+            width: 13.6vw;
             margin: 10px;
             background-color: aliceblue;
         }
         
         .bottom_img {
             height: 14vh;
-            width: 14vw;
+            width: 13.6vw;
         }
         
         .bottom_p {
             text-align: center;
+            font-weight: bold;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
         }
         
         .img_dir {
@@ -175,6 +183,7 @@
             display: flex;
             align-items: center;
             transition: 1s;
+            overflow: hidden;
         }
         
         #bottom_left {
@@ -276,9 +285,9 @@
                             </a>
                         </div>
                         <div class="bottom_box">
-                            <a>
-                                <img src="./img/广告位招租.png" alt="" class="bottom_img">
-                                <p class="bottom_p">广告位招租</p>
+                            <a href="https://www.bilibili.com/">
+                                <img src="./img/bilibili.jpg" alt="" class="bottom_img">
+                                <p class="bottom_p">哔哩哔哩</p>
                             </a>
                         </div>
                         <div class="bottom_box">
@@ -351,11 +360,17 @@
     }
     $('bottom_right').onclick = function() {
         num_b -= 14;
+        if (num_b < -50)
+            num_b = 0;
         $('bottom_in').style.marginLeft = num_b + "vw";
+
     }
     $('bottom_left').onclick = function() {
         num_b += 14;
+        if (num_b > 50)
+            num_b = 0;
         $('bottom_in').style.marginLeft = num_b + "vw";
+
     }
 </script>
 
