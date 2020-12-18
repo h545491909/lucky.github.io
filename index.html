@@ -31,19 +31,18 @@
             position: absolute;
             margin: 0;
             padding: 0;
-            background-image: url(./img/星空.gif);
+            background: url(./img/90.gif);
             width: 300px;
             height: 100px;
             line-height: 100px;
             top: 20vh;
-            border-top-left-radius: 20px;
-            border-top-right-radius: 20px;
-            border-bottom-left-radius: 20px;
-            border-bottom-right-radius: 20px;
+            background-size: cover;
+            background-clip: text;
+            -webkit-background-clip: text;
             text-align: center;
-            font-size: 50px;
+            color: transparent;
+            font-size: 60px;
             font-weight: bold;
-            color: #fff;
             text-shadow: 2px 2px 2px #d62084;
             transition: 1s;
         }
@@ -350,7 +349,7 @@
         var r = Math.floor((Math.random() * 256));
         var g = Math.floor((Math.random() * 256));
         var b = Math.floor((Math.random() * 256));
-        var a = 0.9;
+        var a = 0.3;
         var rgba = "rgba(" + r + "," + g + "," + b + "," + a + ")";
         return rgba;
     }
